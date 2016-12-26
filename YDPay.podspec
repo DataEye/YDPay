@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'YDPay/*.h'
   s.vendored_libraries = 'YDPay/*.a'
-  s.vendored_framework = "YDPay/AlipaySDK.bundle"
+  s.vendored_framework = "YDPay/AlipaySDK.framework"
   s.resources = ["YDPay/YDPay.bundle", "YDPay/AlipaySDK.bundle"]
  
   s.frameworks = "CoreMotion", "CFNetwork", "Foundation", "UIKit", "CoreGraphics", "CoreText", "QuartzCore", "AdSupport", "Security", "CoreTelephony", "CoreLocation", "SystemConfiguration"

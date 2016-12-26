@@ -1,0 +1,4 @@
+platform :ios, '8.0'
+target 'YDPayDemo' do
+pod 'YDPay', :podspec => '../YDPay.podspec'
+end
