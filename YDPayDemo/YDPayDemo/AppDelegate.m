@@ -2,11 +2,12 @@
 //  AppDelegate.m
 //  YDPayDemo
 //
-//  Created by xqwang on 2016/12/26.
+//  Created by xqwang on 2016/12/19.
 //  Copyright © 2016年 xqwang. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "YDPay.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [YDPay initWithAppId:@"123456" developKey:@"123456"];
+    [YDPay setAppScheme:@"YDPayDemo"];
+    
     return YES;
 }
 
@@ -45,6 +49,12 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+    [YDPay dealPayUrl:url];
+    return YES;
 }
 
 

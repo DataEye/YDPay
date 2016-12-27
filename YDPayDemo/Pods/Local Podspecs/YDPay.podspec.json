@@ -15,13 +15,19 @@
     "ios": "8.0"
   },
   "requires_arc": true,
-  "source_files": "YDPay/*.h",
-  "vendored_libraries": "YDPay/*.a",
-  "vendored_frameworks": "YDPay/AlipaySDK.framework",
-  "resources": [
-    "YDPay/YDPay.bundle",
-    "YDPay/AlipaySDK.bundle"
+  "source_files": [
+    "YDPay/*.h",
+    "YDPay/AFNetworking/*.h"
   ],
+  "vendored_libraries": [
+    "YDPay/*.a",
+    "YDPay/AFNetworking/*.a"
+  ],
+  "vendored_frameworks": "YDPay/AlipaySDK.framework",
+  "resource_bundles": {
+    "Alipay": "YDPay/AlipaySDK.bundle",
+    "YDPay": "YDPay/YDPayResource.bundle"
+  },
   "frameworks": [
     "CoreMotion",
     "CFNetwork",
@@ -39,10 +45,5 @@
   "libraries": [
     "z",
     "c++"
-  ],
-  "dependencies": {
-    "AFNetworking": [
-      "~> 3.0"
-    ]
-  }
+  ]
 }
