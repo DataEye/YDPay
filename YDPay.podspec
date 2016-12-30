@@ -14,10 +14,10 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.0'
   s.requires_arc = true
 
-  s.source_files = 'YDPay/*.h'
-  s.vendored_libraries = 'YDPay/*.a'
+  s.source_files = 'YDPay/*.h', 'YDPay/SPaySDK/include/*.h', 'YDPay/wechat/*.h'
+  s.vendored_libraries = 'YDPay/*.a', 'YDPay/SPaySDK/libSPaySDK.a', 'YDPay/wechat/libWeChatSDK.a'
   s.vendored_framework = 'YDPay/AlipaySDK.framework'
-  s.resources = 'YDPay/AlipaySDK.bundle', 'YDPay/YDPay.bundle'
+  s.resources = 'YDPay/AlipaySDK.bundle', 'YDPay/YDPay.bundle', 'YDPay/SPaySDK/SPaySDKResource.bundle'
  
   s.frameworks = 'CoreMotion', 'CFNetwork', 'Foundation', 'UIKit', 'CoreGraphics', 'CoreText', 'QuartzCore', 'AdSupport', 'Security', 'CoreTelephony', 'CoreLocation', 'SystemConfiguration'
   s.libraries  = 'z', 'c++'
