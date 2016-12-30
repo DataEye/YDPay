@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "YDPay"
-  s.version          = "1.0"
+  s.version          = "1.0.0.1"
   s.summary          = "优点付费SDK"
   s.description      = <<-DESC
 优点付费SDK，集成了微信、支付宝、银联等主流的支付SDK，为开发者提供统一的支付接入体验。
