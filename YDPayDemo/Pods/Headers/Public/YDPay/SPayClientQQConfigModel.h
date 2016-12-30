@@ -1,0 +1,1 @@
+../../../YDPay/YDPay/SPaySDK/include/SPayClientQQConfigModel.h

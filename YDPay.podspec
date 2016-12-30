@@ -19,8 +19,8 @@ Pod::Spec.new do |s|
   s.vendored_framework = 'YDPay/AlipaySDK.framework'
   s.resources = 'YDPay/AlipaySDK.bundle', 'YDPay/YDPay.bundle', 'YDPay/SPaySDK/SPaySDKResource.bundle'
  
-  s.frameworks = 'CoreMotion', 'CFNetwork', 'Foundation', 'UIKit', 'CoreGraphics', 'CoreText', 'QuartzCore', 'AdSupport', 'Security', 'CoreTelephony', 'CoreLocation', 'SystemConfiguration'
-  s.libraries  = 'z', 'c++'
+  s.frameworks = 'CoreMotion', 'CFNetwork', 'Foundation', 'UIKit', 'CoreGraphics', 'CoreText', 'QuartzCore', 'AdSupport', 'Security', 'CoreTelephony', 'CoreLocation', 'SystemConfiguration', 'AVFoundation'
+  s.libraries  = 'z', 'c++', 'sqlite3'
 
   s.dependency 'AFNetworking', '~> 3.0' 
 end

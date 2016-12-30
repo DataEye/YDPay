@@ -15,12 +15,21 @@
     "ios": "8.0"
   },
   "requires_arc": true,
-  "source_files": "YDPay/*.h",
-  "vendored_libraries": "YDPay/*.a",
+  "source_files": [
+    "YDPay/*.h",
+    "YDPay/SPaySDK/include/*.h",
+    "YDPay/wechat/*.h"
+  ],
+  "vendored_libraries": [
+    "YDPay/*.a",
+    "YDPay/SPaySDK/libSPaySDK.a",
+    "YDPay/wechat/libWeChatSDK.a"
+  ],
   "vendored_frameworks": "YDPay/AlipaySDK.framework",
   "resources": [
     "YDPay/AlipaySDK.bundle",
-    "YDPay/YDPay.bundle"
+    "YDPay/YDPay.bundle",
+    "YDPay/SPaySDK/SPaySDKResource.bundle"
   ],
   "frameworks": [
     "CoreMotion",
@@ -34,11 +43,13 @@
     "Security",
     "CoreTelephony",
     "CoreLocation",
-    "SystemConfiguration"
+    "SystemConfiguration",
+    "AVFoundation"
   ],
   "libraries": [
     "z",
-    "c++"
+    "c++",
+    "sqlite3"
   ],
   "dependencies": {
     "AFNetworking": [

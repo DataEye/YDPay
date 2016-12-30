@@ -76,10 +76,12 @@ EOM
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "YDPay/YDPay/AlipaySDK.bundle"
   install_resource "YDPay/YDPay/YDPay.bundle"
+  install_resource "YDPay/YDPay/SPaySDK/SPaySDKResource.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "YDPay/YDPay/AlipaySDK.bundle"
   install_resource "YDPay/YDPay/YDPay.bundle"
+  install_resource "YDPay/YDPay/SPaySDK/SPaySDKResource.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

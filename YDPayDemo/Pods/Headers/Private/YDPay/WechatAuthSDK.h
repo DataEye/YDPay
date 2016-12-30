@@ -1,0 +1,1 @@
+../../../YDPay/YDPay/wechat/WechatAuthSDK.h
