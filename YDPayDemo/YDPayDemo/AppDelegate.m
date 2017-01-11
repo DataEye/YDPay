@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [YDPay initWithAppId:@"123456" developKey:@"123456"];
+    [YDPay initWithAppId:@"PF693B1E5ACC4536323DE53DC2A4A125D" developKey:@"PF693B1E5ACC4536323DE53DC2A4A125D"];
     [YDPay setAppScheme:@"YDPayDemo"];
     
     return YES;
