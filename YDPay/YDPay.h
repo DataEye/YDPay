@@ -9,17 +9,17 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-/*typedef NS_OPTIONS(NSUInteger, YDPayStatus)
+typedef NS_ENUM(NSUInteger, YDPayStatus)
 {
-    YD_SUCCESS = 1,
-    YD_FAIL,
+    YD_FAIL = 0,
+    YD_SUCCESS,
     YD_CANCEL,
     YD_UNKNOW,
-};*/
+};
 
 @protocol YDPayDelegate <NSObject>
 
--(void)payResult:(BOOL)result data:(id)data;
+-(void)payResult:(YDPayStatus)result data:(id)data;
 
 @end
 

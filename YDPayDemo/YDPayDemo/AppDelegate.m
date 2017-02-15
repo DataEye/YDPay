@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [YDPay initWithAppId:@"PF693B1E5ACC4536323DE53DC2A4A125D" developKey:@"PF693B1E5ACC4536323DE53DC2A4A125D"];
+    [YDPay initWithAppId:@"PF9B2B1D4CCD1321E3AAF80F4EA924CD0" developKey:@"2a4e04f04cb89ced36509026aba066a9"];
     [YDPay setAppScheme:@"YDPayDemo"];
     
     return YES;
@@ -53,7 +53,7 @@
 
 -(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
 {
-    [YDPay dealPayUrl:url];
+    [YDPay application:app openURL:url options:options];
     return YES;
 }
 
