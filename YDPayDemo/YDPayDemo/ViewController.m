@@ -30,12 +30,19 @@
 -(void)btnClick:(id)sender
 {
     NSString* orderId = [self generateTradeNO];
-    [YDPay pay:orderId orderName:@"购买元宝" userId:@"小李子" productNo:@"123" amount:1 param:@""];
+    [YDPay pay:orderId orderName:@"购买元宝" userId:@"小李子" productNo:@"P000038" amount:1 param:@""];
 }
 
--(void)payResult:(BOOL)result data:(id)data
+-(void)payResult:(YDPayStatus)result data:(id)data
 {
-    NSLog(@"result = %@ reason = %@", data? @"YES" : @"NO", data);
+    if (result == YD_SUCCESS) {
+        NSLog(@"pay success");
+    }else{
+        NSLog(@"pay result = %lu", result);
+    }
+    if (data) {
+        NSLog(@"return data = %@", data);
+    }
 }
 
 - (NSString *)generateTradeNO
