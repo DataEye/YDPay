@@ -41,10 +41,10 @@ end
 开发者需要在自己的代码中实现以下回调协议接口:
 ```
 /**
-* result:付费是否成功
+* result:付费结果，具体值参见YDPayStatus枚举
 * data:付费失败时，为字符串类型，表示付费失败的具体原因，付费成功时，为字典型，根据支付的具体方式，其表示支付完成后的具体支付信息，也可能因其它原因导致该值为nil
 **/
-+(void)payResult:(BOOL)result data:(id)data
++(void)payResult:(YDPayStatus)result data:(id)data
 ```
 ## 参考示例
 ```
@@ -60,7 +60,7 @@ end
   [YDPay pay:orderID orderName:@"购买元宝" userId:self.account.accountId productNo:@"元宝" amount:1 param:nil];
 }
 
--(void)payResult:(BOOL)result data:(id)data{
-  NSLog(@"pay result = %@ reason = %@", result? @"success":@"failed", data);
+-(void)payResult:(YDPayStatus)result data:(id)data{
+  NSLog(@"pay result = %@ reason = %@", (result == YD_SUCCESS)? @"success":@"failed", data);
 }
 ```
