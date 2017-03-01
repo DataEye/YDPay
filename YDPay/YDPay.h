@@ -40,6 +40,11 @@ typedef NS_ENUM(NSUInteger, YDPayStatus)
 +(void)setAppScheme:(NSString*)scheme;
 
 /**
+ *  设置渠道Id
+ **/
++(void)setChannelId:(NSString*)channelId;
+
+/**
  * 不定金额的支付接口
  * @param orderId 订单ID，请开发者确保该ID的惟一性，用于与优点核对数据
  * @param orderName 订单名称
