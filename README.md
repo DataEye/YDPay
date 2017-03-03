@@ -34,6 +34,8 @@ end
 +(void)setAppScheme:(NSString*)scheme;
 //设置付费结果回调，开发者需要实现YDPayDelegate协议，具体参见付费回调说明
 +(void)setDelegate:(id<YDPayDelegate>)delegate;
+//设置渠道ID
++(void)setChannelId:(NSString*)channelId;
 
 ```
 
